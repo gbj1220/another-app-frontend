@@ -12,7 +12,6 @@ export class Login extends Component {
   componentDidMount = () => {
     let getJwtToken = localStorage.getItem("jwtToken");
     if (getJwtToken) {
-      /* checking to see if there is a Jwt token or not */
       this.props.history.push("/movie-home");
     }
   };
@@ -35,7 +34,6 @@ export class Login extends Component {
 
       let decodedJWToken = jwtDecode(result.data.jwtToken);
 
-      //console.log(decodedJWToken);
       this.props.handleUserLogin(decodedJWToken);
 
       this.props.history.push("/movie-home");
@@ -60,7 +58,6 @@ export class Login extends Component {
         <main className='form-signin'>
           <form onSubmit={this.handleLoginOnSubmit}>
             <h1 className='h3 mb-3 fw-normal'>Please login</h1>
-
             <label htmlFor='inputEmail' className='visually-hidden'>
               Email address
             </label>
@@ -75,7 +72,6 @@ export class Login extends Component {
               value={email}
               onChange={this.handleLogin}
             />
-
             <label htmlFor='inputPassword' className='visually-hidden'>
               Password
             </label>
@@ -90,7 +86,8 @@ export class Login extends Component {
               value={password}
               onChange={this.handleLogin}
             />
-            <button className='w-100 btn btn-lg btn-primary' type='submit'>
+
+            <button className='w-100 btn btn-lg btn-warning' type='submit'>
               Login
             </button>
           </form>

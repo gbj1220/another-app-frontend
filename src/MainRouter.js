@@ -8,7 +8,7 @@ import SignUp from "./component/SignUp/SignUp";
 import AuthMovieHome from "./component/AuthHome/AuthHome";
 import Navbar from "./component/Navbar/Navbar";
 import PrivateRoute from "./component/PrivateRoute/PrivateRoute";
-import MovieDetails from "./component/AuthHome/MovieDetails";
+import MovieDetails from "./component/AuthHome/ MovieDetails";
 import Profile from "./component/Profile/Profile";
 
 const MainRouter = (props) => {
